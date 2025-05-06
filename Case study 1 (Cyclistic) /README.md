@@ -1,4 +1,4 @@
-# Google Data Analytics course - Case study
+# Google Data Analytics course - Case study 1
 
 ## Introduction
 As part of my studies within the Google Data Analytics course, I have completed one of the case studies provided. In order to answer the business question posed, I analysed the data of a fictional company and created a report on the results.
