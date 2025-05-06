@@ -1,9 +1,9 @@
 # Google Data Analytics course - Case study 1 (Cyclistic)
 
 <picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/98cc132b-c20a-40c0-b09d-420b72ebcae8">
- <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/98cc132b-c20a-40c0-b09d-420b72ebcae8">
- <img alt="Cyclistic bike-share logo. A circle containing a the name of the company and an icon of a person riding a bike." src="https://github.com/user-attachments/assets/98cc132b-c20a-40c0-b09d-420b72ebcae8">
+ <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/4ce171bb-f41f-4f6a-ae71-4842776e3eb6">
+ <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/4ce171bb-f41f-4f6a-ae71-4842776e3eb6">
+ <img alt="Cyclistic bike-share logo. A circle containing a the name of the company and an icon of a person riding a bike." src="https://github.com/user-attachments/assets/4ce171bb-f41f-4f6a-ae71-4842776e3eb6">
 </picture>
 
 ## Introduction
