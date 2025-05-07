@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df_filepath = ./clean_data/combined_data.csv
+df_filepath = ./combined_data.csv
 df = pd.read_csv(df_filepath)
 
 month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
