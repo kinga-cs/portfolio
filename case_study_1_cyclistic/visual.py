@@ -6,10 +6,15 @@ import seaborn as sns
 df_filepath = Path('clean_data') / 'combined_data.csv'
 df = pd.read_csv(df_filepath)
 
-month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
+               'November', 'December']
 day_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-month_mapping = {'January':'Jan', 'February':'Feb', 'March':'Mar', 'April':'Apr', 'May':'May', 'June':'Jun', 'July':'Jul', 'August':'Aug', 'September':'Sep', 'October':'Oct', 'November':'Nov', 'December':'Dec'}
-day_mapping = {'Monday':'Mon', 'Tuesday':'Tue', 'Wednesday':'Wed', 'Thursday':'Thu', 'Friday':'Fri', 'Saturday':'Sat', 'Sunday':'Sun'}
+month_mapping = {'January': 'Jan', 'February': 'Feb', 'March': 'Mar', 'April': 'Apr', 'May': 'May', 'June': 'Jun',
+                 'July': 'Jul', 'August': 'Aug', 'September': 'Sep', 'October': 'Oct', 'November': 'Nov',
+                 'December': 'Dec'}
+day_mapping = {'Monday': 'Mon', 'Tuesday': 'Tue', 'Wednesday': 'Wed', 'Thursday': 'Thu', 'Friday': 'Fri',
+               'Saturday': 'Sat', 'Sunday': 'Sun'}
+
 
 def total_trips_per_user():
     sns.set_theme(style='whitegrid')
@@ -25,6 +30,7 @@ def total_trips_per_user():
     plt.ylabel('Total trips (millions)')
     plt.savefig('fig_1.jpg')
     plt.show()
+
 
 def total_trips_per_rideable():
     trips_per_rideable = df.groupby(['member_casual', 'rideable_type'])['ride_id'].nunique().reset_index(name='count')
@@ -45,6 +51,7 @@ def total_trips_per_rideable():
     plt.tight_layout()
     plt.savefig('fig_2.jpg')
     plt.show()
+
 
 def total_trips_per_month():
     trips_per_month = df.groupby(['member_casual', 'ride_month'])['ride_id'].nunique().reset_index(name='count')
@@ -68,6 +75,7 @@ def total_trips_per_month():
     plt.savefig('fig_3.jpg')
     plt.show()
 
+
 def total_trips_per_day():
     trips_per_day = df.groupby(['member_casual', 'ride_day'])['ride_id'].nunique().reset_index(name='count')
     trips_per_day['ride_day'] = pd.Categorical(trips_per_day['ride_day'], categories=day_order, ordered=True)
@@ -89,6 +97,7 @@ def total_trips_per_day():
     plt.legend(title='User type')
     plt.savefig('fig_4.jpg')
     plt.show()
+
 
 def total_trips_per_hour():
     df['start_hour'] = pd.to_datetime(df['started_at']).dt.hour
@@ -112,6 +121,7 @@ def total_trips_per_hour():
     plt.savefig('fig_5.jpg')
     plt.show()
 
+
 def avg_ride_length_per_user():
     avg_per_user = df.groupby('member_casual')['ride_length_min'].mean().reset_index(name='avg')
 
@@ -129,6 +139,7 @@ def avg_ride_length_per_user():
     plt.ylabel('Average ride length (minutes)')
     plt.savefig('fig_6.jpg')
     plt.show()
+
 
 def avg_ride_length_per_rideable():
     avg_per_rideable = df.groupby(['member_casual', 'rideable_type'])['ride_length_min'].mean().reset_index(name='avg')
@@ -150,6 +161,7 @@ def avg_ride_length_per_rideable():
     plt.tight_layout()
     plt.savefig('fig_7.jpg')
     plt.show()
+
 
 def avg_ride_length_per_month():
     avg_per_month = df.groupby(['member_casual', 'ride_month'])['ride_length_min'].mean().reset_index(name='avg')
@@ -173,6 +185,7 @@ def avg_ride_length_per_month():
     plt.savefig('fig_8.jpg')
     plt.show()
 
+
 def avg_ride_length_per_day():
     avg_per_day = df.groupby(['member_casual', 'ride_day'])['ride_length_min'].mean().reset_index(name='avg')
     avg_per_day['ride_day'] = pd.Categorical(avg_per_day['ride_day'], categories=day_order, ordered=True)
@@ -195,6 +208,7 @@ def avg_ride_length_per_day():
     plt.savefig('fig_9.jpg')
     plt.show()
 
+
 def avg_ride_length_per_hour():
     df['start_hour'] = pd.to_datetime(df['started_at']).dt.hour
     avg_per_hour = df.groupby(['member_casual', 'start_hour'])['ride_length_min'].mean().reset_index(name='avg')
@@ -212,10 +226,11 @@ def avg_ride_length_per_hour():
     plt.title('Average ride length per hour of day (0-24)')
     plt.xlabel('')
     plt.ylabel('Average ride length (minutes)')
-    plt.xticks(range(0,24))
+    plt.xticks(range(0, 24))
     plt.legend(title='User type')
     plt.savefig('fig_10.jpg')
     plt.show()
+
 
 def main():
     total_trips_per_user()
@@ -228,6 +243,7 @@ def main():
     avg_ride_length_per_month()
     avg_ride_length_per_day()
     avg_ride_length_per_hour()
+
 
 if __name__ == '__main__':
     main()
