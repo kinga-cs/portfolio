@@ -1,10 +1,11 @@
 # Google Data Analytics course - Case study 1 (Cyclistic)
-
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/4ce171bb-f41f-4f6a-ae71-4842776e3eb6">
- <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/4ce171bb-f41f-4f6a-ae71-4842776e3eb6">
- <img alt="Cyclistic bike-share logo. A circle containing a the name of the company and an icon of a person riding a bike." src="https://github.com/user-attachments/assets/4ce171bb-f41f-4f6a-ae71-4842776e3eb6">
-</picture>
+<center>
+ <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/9bb3c33a-0410-40a1-9c46-f3b34e07eafd">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/9bb3c33a-0410-40a1-9c46-f3b34e07eafd">
+  <img alt="Cyclistic bike-share logo. A circle containing a the name of the company and an icon of a person riding a bike." src="https://github.com/user-attachments/assets/9bb3c33a-0410-40a1-9c46-f3b34e07eafd">
+ </picture>
+</center>
 
 ## Introduction
 As part of my studies within the Google Data Analytics course, I have completed one of the case studies provided. In order to answer the business question posed, I analysed the data of a fictional company and created a report on the results.
