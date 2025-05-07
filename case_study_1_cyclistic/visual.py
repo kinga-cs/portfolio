@@ -6,6 +6,7 @@ import seaborn as sns
 df_filepath = Path('clean_data') / 'combined_data.csv'
 df = pd.read_csv(df_filepath)
 
+#
 month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
                'November', 'December']
 day_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
@@ -16,6 +17,7 @@ day_mapping = {'Monday': 'Mon', 'Tuesday': 'Tue', 'Wednesday': 'Wed', 'Thursday'
                'Saturday': 'Sat', 'Sunday': 'Sun'}
 
 
+# bar chart of the total number of trips by type of user
 def total_trips_per_user():
     sns.set_theme(style='whitegrid')
     sns.countplot(
@@ -32,6 +34,7 @@ def total_trips_per_user():
     plt.show()
 
 
+# bar chart of the total number of trips by type of vehicle
 def total_trips_per_rideable():
     trips_per_rideable = df.groupby(['member_casual', 'rideable_type'])['ride_id'].nunique().reset_index(name='count')
     trips_per_rideable['rideable_type'] = trips_per_rideable['rideable_type'].str.replace('_', ' ')
@@ -53,6 +56,7 @@ def total_trips_per_rideable():
     plt.show()
 
 
+# line chart of the total number of trips per month
 def total_trips_per_month():
     trips_per_month = df.groupby(['member_casual', 'ride_month'])['ride_id'].nunique().reset_index(name='count')
     trips_per_month['ride_month'] = pd.Categorical(trips_per_month['ride_month'], categories=month_order, ordered=True)
@@ -76,6 +80,7 @@ def total_trips_per_month():
     plt.show()
 
 
+# line chart of the total number of trips per day of the week
 def total_trips_per_day():
     trips_per_day = df.groupby(['member_casual', 'ride_day'])['ride_id'].nunique().reset_index(name='count')
     trips_per_day['ride_day'] = pd.Categorical(trips_per_day['ride_day'], categories=day_order, ordered=True)
@@ -99,6 +104,7 @@ def total_trips_per_day():
     plt.show()
 
 
+# line chart of the total number of trips per hour of the day
 def total_trips_per_hour():
     df['start_hour'] = pd.to_datetime(df['started_at']).dt.hour
     trips_per_hour = df.groupby(['member_casual', 'start_hour'])['ride_id'].nunique().reset_index(name='count')
@@ -122,6 +128,7 @@ def total_trips_per_hour():
     plt.show()
 
 
+# average ride length by type of users
 def avg_ride_length_per_user():
     avg_per_user = df.groupby('member_casual')['ride_length_min'].mean().reset_index(name='avg')
 
@@ -141,6 +148,7 @@ def avg_ride_length_per_user():
     plt.show()
 
 
+# average ride length by type of vehicle
 def avg_ride_length_per_rideable():
     avg_per_rideable = df.groupby(['member_casual', 'rideable_type'])['ride_length_min'].mean().reset_index(name='avg')
     avg_per_rideable['rideable_type'] = avg_per_rideable['rideable_type'].str.replace('_', ' ')
@@ -163,6 +171,7 @@ def avg_ride_length_per_rideable():
     plt.show()
 
 
+# average ride length per month
 def avg_ride_length_per_month():
     avg_per_month = df.groupby(['member_casual', 'ride_month'])['ride_length_min'].mean().reset_index(name='avg')
     avg_per_month['ride_month'] = pd.Categorical(avg_per_month['ride_month'], categories=month_order, ordered=True)
@@ -186,6 +195,7 @@ def avg_ride_length_per_month():
     plt.show()
 
 
+# average ride length per day of the week
 def avg_ride_length_per_day():
     avg_per_day = df.groupby(['member_casual', 'ride_day'])['ride_length_min'].mean().reset_index(name='avg')
     avg_per_day['ride_day'] = pd.Categorical(avg_per_day['ride_day'], categories=day_order, ordered=True)
@@ -209,6 +219,7 @@ def avg_ride_length_per_day():
     plt.show()
 
 
+# average ride length per hour of the day
 def avg_ride_length_per_hour():
     df['start_hour'] = pd.to_datetime(df['started_at']).dt.hour
     avg_per_hour = df.groupby(['member_casual', 'start_hour'])['ride_length_min'].mean().reset_index(name='avg')
