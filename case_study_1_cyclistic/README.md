@@ -7,7 +7,7 @@
  </picture>
 </div>
 
-[raw_combined_data_head.csv](./data-analytics-portfolio/case_study_1_cyclistic/head_raw_data.csv)
+[raw_combined_data_head.csv](./head_raw_data.csv)
 | ride_id           | rideable_type | started_at           | ended_at             | start_station_name                   | start_station_id | end_station_name                | end_station_id    | start_lat       | start_lng        | end_lat        | end_lng       | member_casual |
 |-------------------|----------------|-----------------------|-----------------------|--------------------------------------|------------------|-------------------------------|-------------------|------------------|------------------|----------------|----------------|----------------|
 | 000019B6351D28DF | electric_bike  | 2024-01-12 01:14:51  | 2024-01-12 01:19:56  | May St & Taylor St                   | 13160            | Racine Ave & 15th St          | 13304             | 41.869421482     | -87.655420184    | 41.861267      | -87.656625     | member         |
