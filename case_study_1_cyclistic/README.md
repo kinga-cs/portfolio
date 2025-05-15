@@ -161,7 +161,7 @@ DELETE FROM combined_data
 WHERE ride_length_min < 1 OR ride_length_min > 1440;
 ```
 
-As a result, the total row count of the dataset was reduced by 139 177 rows (from 5 860 568 to 5 721 391).
+As a result, the final row count of the dataset was reduced by 139 177 rows (from 5 860 568 to 5 721 391).
 
 
 <div align="center">
