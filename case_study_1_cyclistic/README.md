@@ -4,7 +4,7 @@
  <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/9bb3c33a-0410-40a1-9c46-f3b34e07eafd">
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/9bb3c33a-0410-40a1-9c46-f3b34e07eafd">
-  <img alt="Cyclistic bike-share logo. A circle containing a the name of the company and an icon of a person riding a bike." src="https://github.com/user-attachments/assets/9bb3c33a-0410-40a1-9c46-f3b34e07eafd">
+  <img alt="Cyclistic bike-share logo. A circle containing the name of the company and an icon of a person riding a bike." src="https://github.com/user-attachments/assets/9bb3c33a-0410-40a1-9c46-f3b34e07eafd">
  </picture>
 </div>
 
@@ -18,7 +18,6 @@ Cyclistic is a fictional bike-sharing company with a network of more than 5800 g
 The marketing team’s objective is to increase revenue by converting casual riders into annual members. In order to create a new marketing strategy, it is essential that the team understands the behaviour of the casual riders and members. The team was assigned the task of analysing the historical bike trip data and of identifying trends. 
 
 The question this analysis will address is:
-
 >***“How do annual members and casual riders use Cyclistic bikes differently?”***
 
 ### About the data
@@ -163,74 +162,59 @@ WHERE ride_length_min < 1 OR ride_length_min > 1440;
 
 As a result, the final row count of the dataset was reduced by 139 177 rows (from 5 860 568 to 5 721 391).
 
+## Analysing and sharing insights
+
+In the current section of the case study, I will share the insights of my analysis with the help of various charts, as well as, address the previously posed question (“How do annual members and casual riders use Cyclistic bikes differently?”).
 
 <div align="center">
  <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/7351239f-cff3-4e47-b10c-ef30903b3021">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/7351239f-cff3-4e47-b10c-ef30903b3021">
-  <img alt="Figure 1" src="https://github.com/user-attachments/assets/7351239f-cff3-4e47-b10c-ef30903b3021">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/34b40203-f02f-4fce-98f4-8289a358fd5d">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/34b40203-f02f-4fce-98f4-8289a358fd5d">
+  <img alt="Figure 1" src="https://github.com/user-attachments/assets/34b40203-f02f-4fce-98f4-8289a358fd5d">
  </picture>
 </div>
+In 2024, annual members used the bike-sharing service more frequently ... <br/>
+
 <div align="center">
  <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/f9a3c8dd-af0e-4d2d-865b-b785dd9f0629">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/f9a3c8dd-af0e-4d2d-865b-b785dd9f0629">
-  <img alt="Figure 2" src="https://github.com/user-attachments/assets/f9a3c8dd-af0e-4d2d-865b-b785dd9f0629">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/77e15d94-637c-4b95-8f35-d545f7afd2d0">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/77e15d94-637c-4b95-8f35-d545f7afd2d0">
+  <img alt="Figure 6" src="https://github.com/user-attachments/assets/77e15d94-637c-4b95-8f35-d545f7afd2d0">
  </picture>
 </div>
+... while casual riders were more likely to take longer bike trips.
+
 <div align="center">
  <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/2323d4de-7efd-4b87-988e-b44cdbf5a341">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/2323d4de-7efd-4b87-988e-b44cdbf5a341">
-  <img alt="Figure 3" src="https://github.com/user-attachments/assets/2323d4de-7efd-4b87-988e-b44cdbf5a341">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/50952908-ab7e-4aad-836b-faba90dd1845">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/50952908-ab7e-4aad-836b-faba90dd1845">
+  <img alt="Figure 2" src="https://github.com/user-attachments/assets/50952908-ab7e-4aad-836b-faba90dd1845">
  </picture>
 </div>
+In general, users preferred electric bikes as opposed to classic bikes and electric scooters.
+
 <div align="center">
  <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/1af7034a-5ad6-44d1-93d5-a0746dce5c51">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/1af7034a-5ad6-44d1-93d5-a0746dce5c51">
-  <img alt="Figure 4" src="https://github.com/user-attachments/assets/1af7034a-5ad6-44d1-93d5-a0746dce5c51">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/d3cb0b30-34c5-4c2a-ab7a-c1b9c49c6757">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/d3cb0b30-34c5-4c2a-ab7a-c1b9c49c6757">
+  <img alt="Figure 7" src="https://github.com/user-attachments/assets/d3cb0b30-34c5-4c2a-ab7a-c1b9c49c6757">
  </picture>
 </div>
+On average, casual riders rented the classic bike for the longest periods of time.
+
 <div align="center">
  <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/c80c0bef-dd43-4d6b-8729-50b8e9941be0">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/c80c0bef-dd43-4d6b-8729-50b8e9941be0">
-  <img alt="Figure 5" src="https://github.com/user-attachments/assets/c80c0bef-dd43-4d6b-8729-50b8e9941be0">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/4ac4bfa7-8d9a-4a64-a3aa-a6cf24239a10">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/4ac4bfa7-8d9a-4a64-a3aa-a6cf24239a10">
+  <img alt="Figure 3" src="https://github.com/user-attachments/assets/4ac4bfa7-8d9a-4a64-a3aa-a6cf24239a10">
  </picture>
 </div>
+Contrary to my preliminary assumption, the month with the highest number of trips was September and not one of the summer months. Following a research for the cause, it can be safely assumed that September's high number was due to the Bike the Drive fundraiser event that took place on the 1st September 2024. For the event, a 30-mile (~48,3 km) long road was closed to traffic for the bikers in Chicago.
+
 <div align="center">
  <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/0f2693d3-0a96-47bd-b63a-a832efcc0d91">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/0f2693d3-0a96-47bd-b63a-a832efcc0d91">
-  <img alt="Figure 6" src="https://github.com/user-attachments/assets/0f2693d3-0a96-47bd-b63a-a832efcc0d91">
- </picture>
-</div>
-<div align="center">
- <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/f3a40872-1249-4bfa-94b5-dbb835f334ca">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/f3a40872-1249-4bfa-94b5-dbb835f334ca">
-  <img alt="Figure 7" src="https://github.com/user-attachments/assets/f3a40872-1249-4bfa-94b5-dbb835f334ca">
- </picture>
-</div>
-<div align="center">
- <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/b41c6835-338f-4d58-85f3-1f0e199c86c0">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/b41c6835-338f-4d58-85f3-1f0e199c86c0">
-  <img alt="Figure 8" src="https://github.com/user-attachments/assets/b41c6835-338f-4d58-85f3-1f0e199c86c0">
- </picture>
-</div>
-<div align="center">
- <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/a4302590-4201-4ae3-a74f-faf5400fdb52">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/a4302590-4201-4ae3-a74f-faf5400fdb52">
-  <img alt="Figure 9" src="https://github.com/user-attachments/assets/a4302590-4201-4ae3-a74f-faf5400fdb52">
- </picture>
-</div>
-<div align="center">
- <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/0418743a-46be-4ec1-ad21-65affca56736">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/0418743a-46be-4ec1-ad21-65affca56736">
-  <img alt="Figure 10" src="https://github.com/user-attachments/assets/0418743a-46be-4ec1-ad21-65affca56736">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/59011289-e0c6-43f4-adb1-2b7978298adf">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/59011289-e0c6-43f4-adb1-2b7978298adf">
+  <img alt="Figure 8" src="https://github.com/user-attachments/assets/59011289-e0c6-43f4-adb1-2b7978298adf">
  </picture>
 </div>
