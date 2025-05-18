@@ -15,7 +15,7 @@ end_lng double NULL,
 member_casual varchar(225) NOT NULL
 );
 
-INSERT INTO raw_ combined_data
+INSERT INTO raw_combined_data
 (
 SELECT * FROM raw_jan2024
 UNION ALL
@@ -44,38 +44,14 @@ SELECT * FROM raw_dec2024
 
 
 -- creating a table for data cleaning and manipulation
-CREATE TABLE IF NOT EXISTS combined_data
+CREATE TABLE IF NOT EXISTS test
 LIKE raw_combined_data;
 
-INSERT INTO combined_data
-(
-SELECT * FROM raw_jan2024
-UNION ALL
-SELECT * FROM raw_feb2024
-UNION ALL
-SELECT * FROM raw_mar2024
-UNION ALL
-SELECT * FROM raw_apr2024
-UNION ALL
-SELECT * FROM raw_may2024
-UNION ALL
-SELECT * FROM raw_jun2024
-UNION ALL
-SELECT * FROM raw_jul2024
-UNION ALL
-SELECT * FROM raw_aug2024
-UNION ALL
-SELECT * FROM raw_sep2024
-UNION ALL
-SELECT * FROM raw_oct2024
-UNION ALL
-SELECT * FROM raw_nov2024
-UNION ALL
-SELECT * FROM raw_dec2024
-);
+INSERT INTO test
+SELECT * FROM raw_combined_data;
 
 
--- checking inital row count -> 5 860 568d
+-- inital row count -> 5 860 568
 SELECT COUNT(*)
 FROM combined_data; 
 
@@ -89,10 +65,12 @@ ALTER TABLE combined_data MODIFY COLUMN started_at datetime NOT NULL;
 ALTER TABLE combined_data MODIFY COLUMN ended_at datetime NOT NULL;
 
 
--- looking for duplicate rows -> 211 / 422?
+-- checking how many duplicates row are there, if any -> 211
 SELECT count(ride_id) - count(DISTINCT ride_id) AS duplicate_rows
 FROM combined_data;
 
+
+-- seeing which rows are the duplicates
 WITH duplicates AS (
     SELECT *, ROW_NUMBER() OVER (
     	PARTITION BY ride_id ORDER BY started_at, ended_at) AS row_num
@@ -103,7 +81,7 @@ FROM duplicates
 WHERE row_num > 1;
 
 
--- deleting and checking duplicate rows
+-- deleting and checking duplicate rows again
 WITH duplicates AS (
     SELECT *, ROW_NUMBER() OVER (
     	PARTITION BY ride_id ORDER BY started_at, ended_at) AS row_num
@@ -127,16 +105,6 @@ FROM duplicates
 WHERE row_num > 1;
 
 
--- indexing columns
-ALTER TABLE combined_data 
-ADD PRIMARY KEY (ride_id);
-
-ALTER TABLE combined_data
-ADD INDEX idx_started_at (started_at),
-ADD INDEX idx_ended_at (ended_at),
-ADD INDEX idx_member_casual (member_casual);
-
-
 -- adding new columns and indexing them
 ALTER TABLE combined_data
 ADD COLUMN ride_length time NOT NULL,
@@ -144,7 +112,14 @@ ADD COLUMN ride_length_min double NOT NULL,
 ADD COLUMN ride_day varchar(25) NOT NULL,
 ADD COLUMN ride_month varchar(25) NOT NULL;
 
+-- indexing columns
+ALTER TABLE combined_data 
+ADD PRIMARY KEY (ride_id);
+
 ALTER TABLE combined_data
+ADD INDEX idx_started_at (started_at),
+ADD INDEX idx_ended_at (ended_at),
+ADD INDEX idx_member_casual (member_casual),
 ADD INDEX idx_ride_length (ride_length),
 ADD INDEX idx_ride_length_min (ride_length_min),
 ADD INDEX idx_ride_day (ride_day),
@@ -165,7 +140,7 @@ UPDATE combined_data
 SET ride_month = monthname(started_at);
 
 
--- excluding rides that shorter than 1 min and longer than 1 day
+-- excluding rides shorter than 1 min and longer than 1 day
 SELECT count(*) AS to_exclude
 FROM combined_data 
 WHERE ride_length_min < 1 OR ride_length_min > 1440;
