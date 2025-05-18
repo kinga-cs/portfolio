@@ -247,3 +247,12 @@ Annual members used the service mostly on the weekdays, while casual riders rent
  </picture>
 </div>
 The highest numbers of bike rents occured between 5 and 6pm. Up to this time of the day, casual riders' trip numbers grew steadily throughout the day. However, a further inscrease in the annual members' trip numbers can be observed, between 8 and 9am. These suggest that on the one hand, annual members used the service as a means of transport to and from work. On the other hand, casual riders most likely were tourists who discovered the city of Chicago on rented bikes.
+
+<div align="center">
+ <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/7bcc28ad-af77-4735-a844-ecd6ab93536c">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/7bcc28ad-af77-4735-a844-ecd6ab93536c">
+  <img alt="Figure 10" src="https://github.com/user-attachments/assets/7bcc28ad-af77-4735-a844-ecd6ab93536c">
+ </picture>
+</div>
+
