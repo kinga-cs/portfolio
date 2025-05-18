@@ -24,8 +24,7 @@ The question this analysis will address is:
 For the analysis, I used the 2024-year historical bike trip data from the public datasets (accessed 14/05/2025) provided by Motivate International Inc. The datasets were made available under the following license. Due to data-privacy concerns, users’ personally identifiable information was unavailable.
 
 
-## Data cleaning
-*Click [here](https://github.com/kinga-cs/data-analytics-portfolio/blob/main/case_study_1_cyclistic/data_cleaning.sql) to view the full SQL code*
+## Data cleaning *(Click [here](https://github.com/kinga-cs/data-analytics-portfolio/blob/main/case_study_1_cyclistic/data_cleaning.sql) for the full SQL code*
 
 Firstly, I downloaded the 12 CSV files containing the 12 months of data from the 2024 bike trip data, imported them to the database and combined them in a new table (“raw_combined_data”). However, given the size of the dataset – which consists of more than 5 million rows –, I created another table for data cleaning and manipulation (“combined_data”).
 ```
