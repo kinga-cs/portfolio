@@ -1,4 +1,4 @@
--- total no. of trips -> 5721391
+-- total no. of trips -> 5 721 391
 CREATE VIEW totaltrips AS 
 SELECT count(DISTINCT ride_id)
 FROM combined_data;
