@@ -28,6 +28,8 @@ For the analysis, I used the 2024-year historical bike trip data from the public
 *(Click [here](https://github.com/kinga-cs/data-analytics-portfolio/blob/main/case_study_1_cyclistic/data_cleaning.sql) for the full SQL code)*
 
 Firstly, I downloaded the 12 CSV files containing the 12 months of data from the 2024 bike trip data, imported them to the database and combined them in a new table (“raw_combined_data”). However, given the size of the dataset – which consists of more than 5 million rows –, I created another table for data cleaning and manipulation (“combined_data”).
+[head of data](https://github.com/kinga-cs/portfolio/blob/main/case_study_1_cyclistic/_head_raw_data.csv)
+
 ```
 CREATE TABLE IF NOT EXISTS raw_combined_data (
 ride_id varchar(225) NOT NULL,
