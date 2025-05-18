@@ -210,7 +210,7 @@ On average, casual riders rented the classic bike for the longest periods of tim
   <img alt="Figure 3" src="https://github.com/user-attachments/assets/4ac4bfa7-8d9a-4a64-a3aa-a6cf24239a10">
  </picture>
 </div>
-Contrary to my preliminary assumption, the month with the highest number of trips was September and not one of the summer months. Following a research for the cause, it can be safely assumed that September's high number was due to the Bike the Drive fundraiser event that took place on the 1st September 2024. For the event, a 30-mile (~48,3 km) long road was closed to traffic for the bikers in Chicago.
+Contrary to my preliminary assumption, the month with the highest number of trips was September and not one of the summer months. Following a research for the cause, it can be safely assumed that September's high number was due to the annual Bike the Drive fundraiser event that took place on the 1st September 2024. For the event, a 30-mile (~48,3 km) long road was closed to traffic for the bikers in Chicago.
 
 <div align="center">
  <picture>
@@ -255,4 +255,11 @@ The highest numbers of bike rents occured between 5 and 6pm. Up to this time of 
   <img alt="Figure 10" src="https://github.com/user-attachments/assets/7bcc28ad-af77-4735-a844-ecd6ab93536c">
  </picture>
 </div>
+Casual riders spending more time on bikes than annual members also suggest that they use the service as a recreational activity.
 
+### Key findings
+1. Compared to annual members, casual riders used the service less often but spent more time on the bike;
+2. One portion of casual riders were most likely tourists rented bikes for sightseeing on weekdays;
+3. While other portion of casual riders assumably used the service for recreational activities during the weekends;
+4. During spring and summer, both annual members and casual riders took more trips and spent more time on the bikes;
+5. September was the most popular month in terms of rent numbers, most likely due to the annually organized Bike the Drive event.
