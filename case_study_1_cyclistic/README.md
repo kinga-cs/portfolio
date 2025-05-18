@@ -28,7 +28,6 @@ For the analysis, I used the 2024-year historical bike trip data from the public
 *(Click [here](https://github.com/kinga-cs/data-analytics-portfolio/blob/main/case_study_1_cyclistic/data_cleaning.sql) for the full SQL code)*
 
 Firstly, I downloaded the 12 CSV files containing the 12 months of data from the 2024 bike trip data, imported them to the database and combined them in a new table (“raw_combined_data”). However, given the size of the dataset – which consists of more than 5 million rows –, I created another table for data cleaning and manipulation (“combined_data”).
-[head of data](https://github.com/kinga-cs/portfolio/blob/main/case_study_1_cyclistic/_head_raw_data.csv)
 
 ```
 CREATE TABLE IF NOT EXISTS raw_combined_data (
@@ -175,7 +174,7 @@ In the current section of the case study, I will share the insights of my analys
   <img alt="Figure 1" src="https://github.com/user-attachments/assets/34b40203-f02f-4fce-98f4-8289a358fd5d">
  </picture>
 </div>
-In 2024, annual members used the bike-sharing service more frequently ... <br/>
+In 2024, annual members used the bike-sharing service more frequently ...
 
 <div align="center">
  <picture>
@@ -220,3 +219,31 @@ Contrary to my preliminary assumption, the month with the highest number of trip
   <img alt="Figure 8" src="https://github.com/user-attachments/assets/59011289-e0c6-43f4-adb1-2b7978298adf">
  </picture>
 </div>
+As one would expect, the longest rides on average occured between during the months of late spring, early and mid-summer.
+
+<div align="center">
+ <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/e791bc0c-7bd9-465d-a913-0008a4a1d60e">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/e791bc0c-7bd9-465d-a913-0008a4a1d60e">
+  <img alt="Figure 4" src="https://github.com/user-attachments/assets/e791bc0c-7bd9-465d-a913-0008a4a1d60e">
+ </picture>
+</div>
+Annual members used the service mostly on the weekdays, while casual riders rented bikes during the weekends ...
+
+<div align="center">
+ <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/5a71f352-fb66-48cc-a4c6-09a622bd2464">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/5a71f352-fb66-48cc-a4c6-09a622bd2464">
+  <img alt="Figure 9" src="https://github.com/user-attachments/assets/5a71f352-fb66-48cc-a4c6-09a622bd2464">
+ </picture>
+</div>
+... however, both annual members and casual riders took longer trips during the weekends.
+
+<div align="center">
+ <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/806afa1f-06f5-4f73-a189-ee62e5dcb290">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/806afa1f-06f5-4f73-a189-ee62e5dcb290">
+  <img alt="Figure 5" src="https://github.com/user-attachments/assets/806afa1f-06f5-4f73-a189-ee62e5dcb290">
+ </picture>
+</div>
+The highest numbers of bike rents occured between 5 and 6pm. Up to this time of the day, casual riders' trip numbers grew steadily throughout the day. However, a further inscrease in the annual members' trip numbers can be observed, between 8 and 9am. These suggest that on the one hand, annual members used the service as a means of transport to and from work. On the other hand, casual riders most likely were tourists who discovered the city of Chicago on rented bikes.
