@@ -65,7 +65,7 @@ ALTER TABLE combined_data MODIFY COLUMN started_at datetime NOT NULL;
 ALTER TABLE combined_data MODIFY COLUMN ended_at datetime NOT NULL;
 
 
--- checking how many duplicates row are there, if any -> 211
+-- checking the number of duplicate rows, if any -> 211
 SELECT count(ride_id) - count(DISTINCT ride_id) AS duplicate_rows
 FROM combined_data;
 
