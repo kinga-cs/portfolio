@@ -25,7 +25,7 @@ For the analysis, I used the 2024-year historical bike trip data from the public
 
 
 ## Data cleaning 
-*(Click [here](https://github.com/kinga-cs/data-analytics-portfolio/blob/main/case_study_1_cyclistic/data_cleaning.sql) for the full SQL code)*
+*(Click [here](https://github.com/kinga-cs/data-analytics-portfolio/blob/main/case_study_1_cyclistic/data_cleaning.sql) to view the full SQL code)*
 
 Firstly, I downloaded the 12 CSV files containing the 12 months of data from the 2024 bike trip data, imported them to the database and combined them in a new table (“raw_combined_data”). However, given the size of the dataset – which consists of more than 5 million rows –, I created another table for data cleaning and manipulation (“combined_data”).
 
@@ -164,6 +164,7 @@ WHERE ride_length_min < 1 OR ride_length_min > 1440;
 As a result, the final row count of the dataset was reduced by 139 177 rows (from 5 860 568 to 5 721 391).
 
 ## Analysing and sharing insights
+*(Click [here](https://github.com/kinga-cs/data-analytics-portfolio/blob/main/case_study_1_cyclistic/data_cleaning.sql) to view the full Python code)*
 
 In the current section of the case study, I will share the insights of my analysis with the help of various charts, as well as, address the previously posed question (“How do annual members and casual riders use Cyclistic bikes differently?”).
 
