@@ -41,12 +41,14 @@ def main():
             print("This calculator can only interpret measurements of adults aged 20 and over.")
             return
         else:
-            bmi = calculate_bmi(weight, height)            category = categorize(bmi)
+            bmi = calculate_bmi(weight, height)
+            category = categorize(bmi)
             result = f"Your BMI is {bmi} which means you are {category}."
             print(result)
 
     except ValueError:
         print(f"Input error. Please enter valid numbers.")
+
 
 if __name__ == "__main__":
     main()
